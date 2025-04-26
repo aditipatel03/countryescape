@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mountaina, Karjat</title>
+    <style>
+        /* Existing styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html, body {
+            overflow-x: hidden;
+        }
+        body {
+            background: url("https://i.ibb.co/k2SMK2qp/m7.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 2rem;
+            backdrop-filter: brightness(0.6);
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        .info {
+            margin-bottom: 1.5rem;
+        }
+        .info strong {
+            color: #ffd700;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #ffd700;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem 1rem;
+        }
+
+        /* Styles for the photo grid */
+        .photo-grid-container {
+            overflow-x: auto; /* Enable horizontal scroll */
+            margin-top: 1rem;
+            padding-bottom: 1rem; /* Add some space for scrollbar */
+        }
+
+        .photo-grid {
+            display: flex; /* Arrange images in a row */
+            gap: 1rem; /* Spacing between images */
+            padding: 0.5rem; /* Some padding around the images */
+        }
+
+        .photo-grid img {
+            width: 150px; /* Adjust thumbnail size */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Optional: for click feedback */
+        }
+
+        .photo-grid img.active-scroll {
+            transform: scale(1.1); /* Optional: visually highlight the clicked image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+        }
+
+        /* Styles for the image modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* To stack image and back button */
+        }
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 80%; /* Leave space for the back button */
+            position: relative;
+            margin-bottom: 1rem; /* Space between image and button */
+        }
+        .image-modal-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        .back-to-photos {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-to-photos:hover {
+            background-color: #777;
+        }
+
+        .location-section {
+            margin-top: 2rem;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .booking-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+        }
+        .booking-box label {
+            color: #ffd700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .booking-box input, .booking-box select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ffd700;
+            background-color: #333;
+            color: white;
+        }
+        .booking-box button {
+            background-color: #ffd700;
+            color: black;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .booking-box button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+  <h1>Mountaina, Karjat</h1>
+        <div class="info">
+            <p><strong>Price:</strong> ₹15,000 </p>
+            <p><strong>Check-in:</strong> 2 PM</p>
+            <p><strong>Check-out:</strong> 11 AM</p>
+            <p><strong>Address:</strong> Pawna lake </p>
+            <p><strong>Rating:</strong> ★ 4/5</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Description</h2>
+           <p><b>Guest Access:</b> Explore all corners of the house and surrounding plantations. Unwind by the pool, arrange a cozy bonfire, or simply enjoy the serene atmosphere. Venture into nearby farms or find a tranquil spot by the river (with caution).</p>
+
+<p><b>Other Things to Note:</b></p>
+<ul>
+  <li>Private pool with sections for adults and kids.</li>
+  <li>Indoor entertainment: carrom, playing cards, board games.</li>
+  <li>Outdoor activities: Snooker/Pool table, Badminton, Cricket, Football.</li>
+  <li>Green lawn for up to 15 guests (with approval).</li>
+  <li>Over 10 years of plants and trees for exploration.</li>
+</ul>
+
+<p><b>Additional Information:</b></p>
+<ul>
+  <li>Pet-friendly (pets must be supervised; pets not allowed in pool area).</li>
+  <li>Bonfire service available at additional charge.</li>
+  <li>Outdoor cameras for security (verandah and entrance).</li>
+  <li>Natural environment may have insects and bugs.</li>
+  <li>Smoking allowed only in balcony and outdoor spaces.</li>
+  <li>Stag groups and solo travelers welcome.</li>
+  <li>Inverter backup for 3–4 hours during power cuts.</li>
+  <li>Guests can request fruits, produce, or saplings based on availability.</li>
+</ul>
+
+<p><b>Location Brief:</b> Karjat, Maharashtra, India. Nestled amidst serene farmland and country roads, this tranquil haven offers peace and security. Situated in a well-connected area, the last few kilometers may present a slight bumpiness, but rest assured, all cars can reach this idyllic retreat easily.</p>
+
+
+
+
+
+        </div>
+
+        <div class="info">
+            <p><strong>Up to:</strong> max 14 guests </p>
+            <p><strong>Rooms:</strong> 4 </p>
+            <p><strong>Baths:</strong> 4 </p>
+            <p><strong>Meals:</strong> Available</p>
+        </div>
+ <h2 class="section-title">Amenities</h2>
+
+        <div>
+       
+<ul>
+    <li>2 AC Bedrooms</li>
+    <li>Private Swimming Pool</li>
+    <li>Private Parking</li>
+    <li>Music System</li>
+    <li>LED TV in Hall</li>
+    <li>Refrigerator</li>
+    <li>Kitchen Available at Extra Cost</li>
+    <li>Water Heater</li>
+    <li>Power Backup</li>
+    <li>Big Garden Lawn</li>
+    <li>Playing Area</li>
+    <li>Pool Table</li>
+    <li>Table Tennis</li>
+</ul>
+
+
+
+    </div>
+
+  </div>
+</div>
+        <div>
+            <h2 class="section-title">Photos</h2>
+           <div class="photo-grid-container">
+    <div class="photo-grid" id="photoGrid">
+  <img src="m1.jpg" alt="Villa Photo 1" data-full-src="m1.jpg">
+<img src="m2.jpg" alt="Villa Photo 2" data-full-src="m2.jpg">
+<img src="3c.jpg" alt="Villa Photo 3" data-full-src="3c.jpg">
+<img src="4c.jpg" alt="Villa Photo 4" data-full-src="4c.jpg">
+<img src="5c.jpg" alt="Villa Photo 5" data-full-src="5c.jpg">
+<img src="6c.jpg" alt="Villa Photo 6" data-full-src="6c.jpg">
+<img src="7c.jpg" alt="Villa Photo 7" data-full-src="7c.jpg">
+<img src="8c.jpg" alt="Villa Photo 8" data-full-src="8c.jpg">
+<img src="9c.jpg" alt="Villa Photo 9" data-full-src="9c.jpg">
+<img src="12c.jpg" alt="Villa Photo 12" data-full-src="12c.jpg">
+<img src="13c.jpg" alt="Villa Photo 13" data-full-src="13c.jpg">
+<img src="14c.jpg" alt="Villa Photo 14" data-full-src="14c.jpg">
+<img src="15c.jpg" alt="Villa Photo 15" data-full-src="15c.jpg">
+<img src="16c.jpg" alt="Villa Photo 16" data-full-src="16c.jpg">
+<img src="17c.jpg" alt="Villa Photo 17" data-full-src="17c.jpg">
+<img src="18c.jpg" alt="Villa Photo 18" data-full-src="18c.jpg">
+<img src="19c.jpg" alt="Villa Photo 19" data-full-src="19c.jpg">
+<img src="20c.jpg" alt="Villa Photo 20" data-full-src="20c.jpg">
+<img src="21c.jpg" alt="Villa Photo 21" data-full-src="21c.jpg">
+<img src="22c.jpg" alt="Villa Photo 22" data-full-src="22c.jpg">
+<img src="23c.jpg" alt="Villa Photo 23" data-full-src="23c.jpg">
+<img src="24c.jpg" alt="Villa Photo 24" data-full-src="24c.jpg">
+<img src="25c.jpg" alt="Villa Photo 25" data-full-src="25c.jpg">
+<img src="26c.jpg" alt="Villa Photo 26" data-full-src="26c.jpg">
+<img src="27c.jpg" alt="Villa Photo 27" data-full-src="27c.jpg">
+<img src="28c.jpg" alt="Villa Photo 28" data-full-src="28c.jpg">
+<img src="29c.jpg" alt="Villa Photo 29" data-full-src="29c.jpg">
+<img src="30c.jpg" alt="Villa Photo 30" data-full-src="30c.jpg">
+<img src="31c.jpg" alt="Villa Photo 31" data-full-src="31c.jpg">
+  </div>
+</div>
+<!-- Modal container -->
+<div class="image-modal" id="imageModal">
+    <div class="image-modal-content">
+        <img id="modalImage" src="" alt="Enlarged Photo">
+    </div>
+    <button class="back-to-photos" onclick="closeModal()">Back to Photos</button>
+</div>
+
+<script>
+    const images = document.querySelectorAll('.photo-grid img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    images.forEach((img) => {
+        img.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            modalImg.src = img.getAttribute('data-full-src');
+        });
+    });
+
+    function closeModal() {
+        modal.style.display = 'none';
+        modalImg.src = '';
+    }
+
+    // Optional: Close modal on background click
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+</script>
+
+            </body>
+        </html>
+
+        <div class="location-section">
+            <h2 class="section-title">Our Location</h2>
+           <iframe src="https://www.google.com/maps?q=Lonavala,+Maharashtra&output=embed"allowfullscreen></iframe>
+
+        </div>
+
+        <div class="booking-box">
+            <h2 class="section-title">Book Your Stay</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="number" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>

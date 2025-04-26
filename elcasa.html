@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>El Casa 4BHK Villa</title>
+    <style>
+        /* Existing styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html, body {
+            overflow-x: hidden;
+        }
+        body {
+            background: url("https://i.ibb.co/k2mXNh9z/e14.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 2rem;
+            backdrop-filter: brightness(0.6);
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        .info {
+            margin-bottom: 1.5rem;
+        }
+        .info strong {
+            color: #ffd700;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #ffd700;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem 1rem;
+        }
+
+        /* Styles for the photo grid */
+        .photo-grid-container {
+            overflow-x: auto; /* Enable horizontal scroll */
+            margin-top: 1rem;
+            padding-bottom: 1rem; /* Add some space for scrollbar */
+        }
+
+        .photo-grid {
+            display: flex; /* Arrange images in a row */
+            gap: 1rem; /* Spacing between images */
+            padding: 0.5rem; /* Some padding around the images */
+        }
+
+        .photo-grid img {
+            width: 150px; /* Adjust thumbnail size */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Optional: for click feedback */
+        }
+
+        .photo-grid img.active-scroll {
+            transform: scale(1.1); /* Optional: visually highlight the clicked image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+        }
+
+        /* Styles for the image modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* To stack image and back button */
+        }
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 80%; /* Leave space for the back button */
+            position: relative;
+            margin-bottom: 1rem; /* Space between image and button */
+        }
+        .image-modal-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        .back-to-photos {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-to-photos:hover {
+            background-color: #777;
+        }
+
+        .location-section {
+            margin-top: 2rem;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .booking-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+        }
+        .booking-box label {
+            color: #ffd700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .booking-box input, .booking-box select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ffd700;
+            background-color: #333;
+            color: white;
+        }
+        .booking-box button {
+            background-color: #ffd700;
+            color: black;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .booking-box button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>El Casa 4 BHK</h1>
+        <div class="info">
+            <p><strong>Price:</strong> ₹15,000 (21 Hours)</p>
+            <p><strong>Check-in:</strong> 2 PM</p>
+            <p><strong>Check-out:</strong> 11 AM</p>
+            <p><strong>Address:</strong> Lonavala </p>
+            <p><strong>Rating:</strong> ★ 4.8/5</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Description</h2>
+            <p>El Casa 4BHK is a luxurious retreat nestled in the serene landscapes of Karjat. This spacious villa offers two elegantly designed bedrooms, a modern living area, and a fully equipped kitchen. Enjoy breathtaking views from the balcony, relax in the lush green garden, or unwind in the private pool. Perfect for families, couples, or small groups looking for a peaceful getaway. Conveniently located near nature trails and local attractions, it provides the ideal blend of comfort and adventure. Experience tranquility, luxury, and modern amenities, all in one place, for a truly memorable stay.</p>
+        </div>
+
+        <div class="info">
+            <p><strong>Up to:</strong> 12 Guests</p>
+            <p><strong>Rooms:</strong> 4</p>
+            <p><strong>Baths:</strong> 4</p>
+            <p><strong>Meals:</strong> Available</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Amenities</h2>
+            <ul>
+                <li>Air Conditioner</li>
+                <li>Private Parking</li>
+                <li>Dining Table</li>
+                <li>Refrigerator</li>
+                <li>Outdoor Furniture</li>
+                <li>WiFi</li>
+                <li>Garden</li>
+                <li>Cutlery</li>
+                <li>Private Pool</li>
+                <li>Music System</li>
+                <li>Pool Loungers</li>
+                <li>Spacious Lawn</li>
+                <li>Chef Availability</li>
+                <li>Gazebo</li>
+                <li>Bar Counter</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="section-title">Photos</h2>
+            <div class="photo-grid-container">
+                <div class="photo-grid" id="photoGrid">
+                    <img src="e1.jpg" alt="Villa Photo 1" data-full-src="e1.jpg">
+                    <img src="e2.jpg" alt="Villa Photo 2" data-full-src="e2.jpg">
+                    <img src="e3.jpg" alt="Villa Photo 3" data-full-src="e3.jpg">
+                    <img src="e4.jpg" alt="Villa Photo 4" data-full-src="e4.jpg">
+                    <img src="e5.jpg" alt="Villa Photo 5" data-full-src="e5.jpg">
+                    <img src="e6.jpg" alt="Villa Photo 6" data-full-src="e6.jpg">
+                    <img src="e7.jpg" alt="Villa Photo 7" data-full-src="e7.jpg">
+                    <img src="e8.jpg" alt="Villa Photo 8" data-full-src="e8.jpg">
+                    <img src="e9.jpg" alt="Villa Photo 9" data-full-src="e9.jpg">
+                    <img src="e10.jpg" alt="Villa Photo 10" data-full-src="e10.jpg">
+                    <img src="e11.jpg" alt="Villa Photo 11" data-full-src="e11.jpg">
+                    <img src="e12.jpg" alt="Villa Photo 12" data-full-src="e12.jpg">
+                    <img src="e13.jpg" alt="Villa Photo 13" data-full-src="e13.jpg">
+                    <img src="e14.jpg" alt="Villa Photo 14" data-full-src="e14.jpg">
+                    <img src="e15.jpg" alt="Villa Photo 15" data-full-src="e15.jpg">
+                    <img src="e16.jpg" alt="Villa Photo 16" data-full-src="e16.jpg">
+                    <img src="e17.jpg" alt="Villa Photo 17" data-full-src="e17.jpg">
+                    <img src="e18.jpg" alt="Villa Photo 18" data-full-src="e18.jpg">
+                    <img src="e19.jpg" alt="Villa Photo 19" data-full-src="e19.jpg">
+                    <img src="e20.jpg" alt="Villa Photo 20" data-full-src="e20.jpg">
+                    <img src="e21.jpg" alt="Villa Photo 21" data-full-src="e21.jpg">
+                    <img src="e22.jpg" alt="Villa Photo 22" data-full-src="e22.jpg">
+                    <img src="e23.jpg" alt="Villa Photo 23" data-full-src="e23.jpg">
+                    <img src="e24.jpg" alt="Villa Photo 24" data-full-src="e24.jpg">
+                    <img src="e25.jpg" alt="Villa Photo 25" data-full-src="e25.jpg">
+                   
+                    <img src="e27.jpg" alt="Villa Photo 27" data-full-src="e27.jpg">
+                    <img src="e28.jpg" alt="Villa Photo 28" data-full-src="e28.jpg">
+                    <img src="e29.jpg" alt="Villa Photo 29" data-full-src="e29.jpg">
+                    <img src="e30.jpg" alt="Villa Photo 30" data-full-src="e30.jpg">
+                    <img src="e31.jpg" alt="Villa Photo 31" data-full-src="e31.jpg">
+                    <img src="e32.jpg" alt="Villa Photo 32" data-full-src="e32.jpg">
+                    <img src="e33.jpg" alt="Villa Photo 33" data-full-src="e33.jpg">
+                    <img src="e34.jpg" alt="Villa Photo 34" data-full-src="e34.jpg">
+                    <img src="e35.jpg" alt="Villa Photo 35" data-full-src="e35.jpg">
+                    <img src="e36.jpg" alt="Villa Photo 36" data-full-src="e36.jpg">
+                    <img src="e37.jpg" alt="Villa Photo 37" data-full-src="e37.jpg">
+                    <img src="e38.jpg" alt="Villa Photo 38" data-full-src="e38.jpg">
+                    <img src="e39.jpg" alt="Villa Photo 39" data-full-src="e39.jpg">
+                    <img src="e40.jpg" alt="Villa Photo 40" data-full-src="e40.jpg">
+                    <img src="e41.jpg" alt="Villa Photo 41" data-full-src="e41.jpg">
+                    <img src="e42.jpg" alt="Villa Photo 42" data-full-src="e42.jpg">
+                    <img src="e43.jpg" alt="Villa Photo 43" data-full-src="e43.jpg">
+                    <img src="e44.jpg" alt="Villa Photo 44" data-full-src="e44.jpg">
+                    <img src="e45.jpg" alt="Villa Photo 45" data-full-src="e45.jpg">
+                    <img src="e46.jpg" alt="Villa Photo 46" data-full-src="e46.jpg">
+                    <img src="e47.jpg" alt="Villa Photo 47" data-full-src="e47.jpg">
+                    <img src="e48.jpg" alt="Villa Photo 48" data-full-src="e48.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <h2 class="section-title">Our Location</h2>
+           <iframe src="https://www.google.com/maps?q=Villa+No+001,+Lonavala,+India&output=embed" allowfullscreen></iframe>
+        </div>
+
+        <div class="booking-box">
+            <h2 class="section-title">Book Your Stay</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="number" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>

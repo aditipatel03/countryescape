@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ripple Cabin 2BHK, Pawna By Country Escape</title>
+    <style>
+        /* Existing styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html, body {
+            overflow-x: hidden;
+        }
+        body {
+            background: url("https://i.ibb.co/GfKNJPt5/r15.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 2rem;
+            backdrop-filter: brightness(0.6);
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        .info {
+            margin-bottom: 1.5rem;
+        }
+        .info strong {
+            color: #ffd700;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #ffd700;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem 1rem;
+        }
+
+        /* Styles for the photo grid */
+        .photo-grid-container {
+            overflow-x: auto; /* Enable horizontal scroll */
+            margin-top: 1rem;
+            padding-bottom: 1rem; /* Add some space for scrollbar */
+        }
+
+        .photo-grid {
+            display: flex; /* Arrange images in a row */
+            gap: 1rem; /* Spacing between images */
+            padding: 0.5rem; /* Some padding around the images */
+        }
+
+        .photo-grid img {
+            width: 150px; /* Adjust thumbnail size */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Optional: for click feedback */
+        }
+
+        .photo-grid img.active-scroll {
+            transform: scale(1.1); /* Optional: visually highlight the clicked image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+        }
+
+        /* Styles for the image modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* To stack image and back button */
+        }
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 80%; /* Leave space for the back button */
+            position: relative;
+            margin-bottom: 1rem; /* Space between image and button */
+        }
+        .image-modal-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        .back-to-photos {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-to-photos:hover {
+            background-color: #777;
+        }
+
+        .location-section {
+            margin-top: 2rem;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .booking-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+        }
+        .booking-box label {
+            color: #ffd700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .booking-box input, .booking-box select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ffd700;
+            background-color: #333;
+            color: white;
+        }
+        .booking-box button {
+            background-color: #ffd700;
+            color: black;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .booking-box button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ripple Cabin 2BHK, Pawna By Country Escape</h1>
+        <div class="info">
+            <p><strong>Price:</strong> ₹15,000 </p>
+            <p><strong>Check-in:</strong> 2 PM</p>
+            <p><strong>Check-out:</strong> 11 AM</p>
+            <p><strong>Address:</strong> pawana Lake </p>
+            <p><strong>Rating:</strong> ★ 4/5</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Description</h2>
+            <p>This cute little wooden cabin has an exceptional view of Pawna Lake. Whether you are looking to relax or picnic, go fishing or boating to our private island .We are happy to serve you with a delightful memorable experience. The space A 2 bedroom, en-suite bathroom, an outdoor deck, and lush green lawn. Each bedroom has an AC, TV, and windows with Pawna lake view. Everything you need and nothing you don't need. For Food: We have a Kitchen separate from the property taking into consideration of your privacy, which offers you a meal package at Rs. 1200/person for lunch after your check-in, evening tea with snacks (which you can have next to the bonfire), dinner, and breakfast before you check out. The food is made with fresh groceries fetched from the local market and made fresh in front of you. (Kitchen access only for staff). Pets are welcome to join you during your stay; however, kindly note that they are not permitted on the beds and soft furniture's for the comfort and hygiene of all guests.
+ </p>
+        </div>
+
+        <div class="info">
+            <p><strong>Up to:</strong> guest </p>
+            <p><strong>Rooms:</strong> 2 </p>
+            <p><strong>Baths:</strong> 2 </p>
+            <p><strong>Meals:</strong> Available</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Amenities</h2>
+         <ul>
+    <li>Pet Friendly</li>
+    <li>Towels</li>
+    <li>Board Games</li>
+    <li>Air conditioned room</li>
+    <li>Music System</li>
+    <li>Lake Access</li>
+    <li>For Couples</li>
+    <li>Parking</li>
+    <li>Toiletries</li>
+    <li>Wifi</li>
+    <li>Private Lawn</li>
+    <li>TV with Cable</li>
+    <li>Barbeque</li>
+    <li>Caretaker</li>
+    <li>CCTV</li>
+    <li>Elderly Friendly</li>
+    <li>Extra Mattress</li>
+    <li>Geysers/Hot Water</li>
+    <li>Meals Delivered Here</li>
+    <li>Water Purifier</li>
+    <li>Generator Backup</li>
+</ul>
+
+        </div>
+
+        <div>
+            <h2 class="section-title">Photos</h2>
+           <div class="photo-grid-container">
+    <div class="photo-grid" id="photoGrid">
+        <img src="r1.jpg" alt="Villa Photo 1" data-full-src="r1.jpg">
+        <img src="r2.jpg" alt="Villa Photo 2" data-full-src="r2.jpg">
+        <img src="r3.jpg" alt="Villa Photo 3" data-full-src="r3.jpg">
+        <img src="r4.jpg" alt="Villa Photo 4" data-full-src="r4.jpg">
+        <img src="r5.jpg" alt="Villa Photo 5" data-full-src="r5.jpg">
+        <img src="r6.jpg" alt="Villa Photo 6" data-full-src="r6.jpg">
+        <img src="r7.jpg" alt="Villa Photo 7" data-full-src="r7.jpg">
+        <img src="r8.jpg" alt="Villa Photo 8" data-full-src="r8.jpg">
+        <img src="r9.jpg" alt="Villa Photo 9" data-full-src="r9.jpg">
+        <img src="r10.jpg" alt="Villa Photo 10" data-full-src="r10.jpg">
+        <img src="r11.jpg" alt="Villa Photo 11" data-full-src="r11.jpg">
+        <img src="r12.jpg" alt="Villa Photo 12" data-full-src="r12.jpg">
+        <img src="r13.jpg" alt="Villa Photo 13" data-full-src="r13.jpg">
+        <img src="r14.jpg" alt="Villa Photo 14" data-full-src="r14.jpg">
+        <img src="r15.jpg" alt="Villa Photo 15" data-full-src="r15.jpg">
+        <img src="r16.jpg" alt="Villa Photo 16" data-full-src="r16.jpg">
+        <img src="r17.jpg" alt="Villa Photo 17" data-full-src="r17.jpg">
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <h2 class="section-title">Our Location</h2>
+           <iframe src="https://www.google.com/maps?q=Pawna+Lake,+Lonavala,+Maharashtra&output=embed" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="booking-box">
+            <h2 class="section-title">Book Your Stay</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="number" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>

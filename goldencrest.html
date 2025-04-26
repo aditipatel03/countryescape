@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Golden Crest Manor 3BHK,Lonavala</title>
+    <style>
+        /* Existing styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html, body {
+            overflow-x: hidden;
+        }
+        body {
+            background: url("https://i.ibb.co/1hRtm3x/g5.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 2rem;
+            backdrop-filter: brightness(0.6);
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        .info {
+            margin-bottom: 1.5rem;
+        }
+        .info strong {
+            color: #ffd700;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #ffd700;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem 1rem;
+        }
+
+        /* Styles for the photo grid */
+        .photo-grid-container {
+            overflow-x: auto; /* Enable horizontal scroll */
+            margin-top: 1rem;
+            padding-bottom: 1rem; /* Add some space for scrollbar */
+        }
+
+        .photo-grid {
+            display: flex; /* Arrange images in a row */
+            gap: 1rem; /* Spacing between images */
+            padding: 0.5rem; /* Some padding around the images */
+        }
+
+        .photo-grid img {
+            width: 150px; /* Adjust thumbnail size */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Optional: for click feedback */
+        }
+
+        .photo-grid img.active-scroll {
+            transform: scale(1.1); /* Optional: visually highlight the clicked image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+        }
+
+        /* Styles for the image modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* To stack image and back button */
+        }
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 80%; /* Leave space for the back button */
+            position: relative;
+            margin-bottom: 1rem; /* Space between image and button */
+        }
+        .image-modal-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        .back-to-photos {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-to-photos:hover {
+            background-color: #777;
+        }
+
+        .location-section {
+            margin-top: 2rem;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .booking-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+        }
+        .booking-box label {
+            color: #ffd700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .booking-box input, .booking-box select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ffd700;
+            background-color: #333;
+            color: white;
+        }
+        .booking-box button {
+            background-color: #ffd700;
+            color: black;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .booking-box button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Golden Crest Manor 3BHK,Lonavala</h1>
+        <div class="info">
+            <p><strong>Price:</strong> ₹15,000 </p>
+            <p><strong>Check-in:</strong> 2 PM</p>
+            <p><strong>Check-out:</strong> 11 AM</p>
+            <p><strong>Address:</strong>Lonavala</p>
+            <p><strong>Rating:</strong> ★ 4/5</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Description</h2>
+            <p>Golden Crest Manor Villa is a luxurious 3 BHK property with a private swimming pool, is situated in the picturesque town of Lonavala. Nestled amidst lush, landscaped gardens, this opulent retreat boasts unrivalled elegance. The villa, a masterpiece of architectural design, features spacious living areas adorned with tasteful decor and high-end furnishings. Each of the four bedrooms exudes refinement, ensuring guests enjoy privacy and comfort. Property Layout: Ground plus 1 Bedrooms: - This Villa boasts 3 bedrooms, situated on the First Floor. - Every bedroom is equipped with an air conditioner. Fresh linen and pillows are provided in all rooms. Wardrobes are available. One of the bathrooms is equipped with a luxurious bathtub All bathrooms are modern and have geysers for hot water supply. Living Room: - The living room has sofa seater for 9 people. - A dining table for 4 people is also available within the living room. Bathrooms: - All bedrooms have attached bathrooms equipped with basic toiletries. - A common bathroom is available in the living room. Kitchen & Meals: - Heavy cooking is prohibited. - The kitchen is semi-equipped with essential appliances, including a refrigerator, microwave and water purifier. - Cutlery and crockery are readily available to use for up to 12 people. Outdoor Area: - The villa has a huge lawn. - A private indoor pool is available from 2pm till 10pm, the pool size is (18x10x4.5ft approx.). - The lawn has seating arrangement for 10-12 people Adult supervision is required for children at all times in the pool area. Enjoy a comfortable sit-out for relaxation, complete with outdoor furniture, a chair, and table setup perfect for sharing drinks. </p>
+        </div>
+
+        <div class="info">
+            <p><strong>Up to:</strong> guest </p>
+            <p><strong>Rooms:</strong> 3 </p>
+            <p><strong>Baths:</strong> 5 </p>
+            <p><strong>Meals:</strong> Available</p>
+        </div>
+
+        <div>
+           <h2 style="text-align: center; color: #ffffff;">Popular Amenities</h2>
+
+<div style="padding: 30px; font-family: 'Segoe UI', sans-serif; color: #ffffff;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+
+    <!-- Stay & Comfort -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Stay & Comfort</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Private Swimming Pool</li>
+        <li>Caretaker</li>
+        <li>Housekeeping</li>
+        <li>Free Wi-Fi</li>
+        <li>Bonfire</li>
+        <li>Barbeque</li>
+        <li>Kitchenette</li>
+        <li>Living Room</li>
+        <li>Private Parking</li>
+        <li>Power Backup</li>
+        <li>Indoor Games</li>
+        <li>Fireplace</li>
+        <li>Seating Area</li>
+        <li>Air Conditioning</li>
+      </ul>
+    </div>
+
+    <!-- Bathroom & Bedroom -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Room and Bathroom</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Shaving Mirror</li>
+        <li>Toiletries</li>
+        <li>Blanket</li>
+        <li>Kettle</li>
+        <li>Chair</li>
+        <li>Closet</li>
+        <li>Safe</li>
+        <li>Bathtub</li>
+        <li>Hot & Cold Water</li>
+        <li>Western Toilet Seat</li>
+        <li>Charging Points</li>
+      </ul>
+    </div>
+
+    <!-- Basic Facilities -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Basic Facilities</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Housekeeping</li>
+        <li>Kitchenette</li>
+        <li>Air Conditioning</li>
+        <li>Free Wi-Fi</li>
+        <li>Swimming Pool</li>
+        <li>Parking</li>
+        <li>Power Backup</li>
+      </ul>
+    </div>
+
+    <!-- Food and Drinks -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Food and Drinks</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Barbeque</li>
+      </ul>
+    </div>
+
+    <!-- Safety and Security -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Safety and Security</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Fire Extinguishers</li>
+        <li>CCTV</li>
+      </ul>
+    </div>
+
+    <!-- Health and Wellness -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Health and Wellness</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>First-aid Services</li>
+      </ul>
+    </div>
+
+    <!-- General Services -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">General Services</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Caretaker</li>
+        <li>Doctor on Call</li>
+      </ul>
+    </div>
+
+    <!-- Outdoor Activities -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Outdoor Activities and Sports</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Cycling</li>
+        <li>Bonfire</li>
+      </ul>
+    </div>
+
+    <!-- Indoor Activities -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Indoor Activities and Sports</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Indoor Games</li>
+      </ul>
+    </div>
+
+    <!-- Common Area -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Common Area</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Living Room</li>
+        <li>Seating Area</li>
+        <li>Fireplace</li>
+      </ul>
+    </div>
+
+    <!-- Other Facilities -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Other Facilities</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Security Guard</li>
+        <li>Music System</li>
+        <li>Sitout Area</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+    </div>
+
+  </div>
+</div>
+
+
+        <div>
+            <h2 class="section-title">Photos</h2>
+           <div class="photo-grid-container">
+    <div class="photo-grid" id="photoGrid">
+  <img src="g1.jpg" alt="Villa Photo 1" data-full-src="g1.jpg">
+<img src="g2.jpg" alt="Villa Photo 2" data-full-src="g2.jpg">
+<img src="g3.jpg" alt="Villa Photo 3" data-full-src="g3.jpg">
+<img src="g4.jpg" alt="Villa Photo 4" data-full-src="g4.jpg">
+<img src="g5.jpg" alt="Villa Photo 5" data-full-src="g5.jpg">
+<img src="g6.jpg" alt="Villa Photo 6" data-full-src="g6.jpg">
+<img src="g7.jpg" alt="Villa Photo 7" data-full-src="g7.jpg">
+<img src="g8.jpg" alt="Villa Photo 8" data-full-src="g8.jpg">
+<img src="g9.jpg" alt="Villa Photo 9" data-full-src="g9.jpg">
+<img src="g10.jpg" alt="Villa Photo 10" data-full-src="g10.jpg">
+<img src="g11.jpg" alt="Villa Photo 11" data-full-src="g11.jpg">
+<img src="g12.jpg" alt="Villa Photo 12" data-full-src="g12.jpg">
+<img src="g13.jpg" alt="Villa Photo 13" data-full-src="g13.jpg">
+<img src="g14.jpg" alt="Villa Photo 14" data-full-src="g14.jpg">
+<img src="g16.jpg" alt="Villa Photo 16" data-full-src="g16.jpg">
+<img src="g17.jpg" alt="Villa Photo 17" data-full-src="g17.jpg">
+<img src="g18.jpg" alt="Villa Photo 18" data-full-src="g18.jpg">
+<img src="g19.jpg" alt="Villa Photo 19" data-full-src="g19.jpg">
+<img src="g20.jpg" alt="Villa Photo 20" data-full-src="g20.jpg">
+<img src="g21.jpg" alt="Villa Photo 21" data-full-src="g21.jpg">
+
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <h2 class="section-title">Our Location</h2>
+           <iframe src="https://www.google.com/maps?q=Lonavala,+Maharashtra&output=embed" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="booking-box">
+            <h2 class="section-title">Book Your Stay</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="number" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>

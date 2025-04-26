@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aqua vista villa by country escape</title>
+    <style>
+        /* Existing styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html, body {
+            overflow-x: hidden;
+        }
+        body {
+            background: url("https://i.ibb.co/zT66r7SX/a10.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 2rem;
+            backdrop-filter: brightness(0.6);
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        .info {
+            margin-bottom: 1.5rem;
+        }
+        .info strong {
+            color: #ffd700;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #ffd700;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem 1rem;
+        }
+
+        /* Styles for the photo grid */
+        .photo-grid-container {
+            overflow-x: auto; /* Enable horizontal scroll */
+            margin-top: 1rem;
+            padding-bottom: 1rem; /* Add some space for scrollbar */
+        }
+
+        .photo-grid {
+            display: flex; /* Arrange images in a row */
+            gap: 1rem; /* Spacing between images */
+            padding: 0.5rem; /* Some padding around the images */
+        }
+
+        .photo-grid img {
+            width: 150px; /* Adjust thumbnail size */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Optional: for click feedback */
+        }
+
+        .photo-grid img.active-scroll {
+            transform: scale(1.1); /* Optional: visually highlight the clicked image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+        }
+
+        /* Styles for the image modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* To stack image and back button */
+        }
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 80%; /* Leave space for the back button */
+            position: relative;
+            margin-bottom: 1rem; /* Space between image and button */
+        }
+        .image-modal-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        .back-to-photos {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-to-photos:hover {
+            background-color: #777;
+        }
+
+        .location-section {
+            margin-top: 2rem;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .booking-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+        }
+        .booking-box label {
+            color: #ffd700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .booking-box input, .booking-box select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ffd700;
+            background-color: #333;
+            color: white;
+        }
+        .booking-box button {
+            background-color: #ffd700;
+            color: black;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .booking-box button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+  <h1>Aqua vista villa by country escape</h1>
+        <div class="info">
+            <p><strong>Price:</strong> ₹15,000 </p>
+            <p><strong>Check-in:</strong> 2 PM</p>
+            <p><strong>Check-out:</strong> 11 AM</p>
+            <p><strong>Address:</strong> karjat</p>
+            <p><strong>Rating:</strong> ★ 4/5</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Description</h2>
+            <p>A spacious and inviting lakeside retreat with pleasing interiors provides the perfect blend of nature's serenity and the comforts of home.Indoors, discover a private pool, gazebo, bar counter, waterfall, and a plethora of luxurious amenities for an indulgent stay. Outdoors, explore everything from hiking trails to farm visits, all conveniently accessible from our vacation home!Escape to a spacious lakeside retreat with luxurious amenities inside, including a private pool and gazebo. Outside, explore hiking trails and nearby farms easily accessible from our vacation home.
+ </p>
+        </div>
+
+        <div class="info">
+            <p><strong>Up to:</strong> max 25 guests </p>
+            <p><strong>Rooms:</strong> 5 </p>
+            <p><strong>Baths:</strong> 6 </p>
+            <p><strong>Meals:</strong> Available</p>
+        </div>
+
+        <div>
+      <ul>
+    <li>Wifi</li>
+    <li>Private Lawn</li>
+    <li>Private Pool</li>
+    <li>AC in Living Room</li>
+    <li>Bathtub</li>
+    <li>Air conditioned room</li>
+    <li>Refrigerator</li>
+    <li>Towels</li>
+    <li>Board Games</li>
+    <li>Caretaker</li>
+    <li>CCTV</li>
+    <li>Dining Table</li>
+    <li>Elderly Friendly</li>
+    <li>Extra Mattress</li>
+    <li>Toiletries</li>
+    <li>Ideal for Large Groups</li>
+    <li>Music System</li>
+    <li>Microwave</li>
+    <li>Parking</li>
+    <li>Smart TV</li>
+    <li>Barbeque</li>
+    <li>Lake Access</li>
+    <li>Best Road Access</li>
+    <li>Inverter Backup</li>
+    <li>Water Purifier</li>
+    <li>Geysers/Hot Water</li>
+    <li>Cook Available</li>
+    <li>Kitchen (Quick Meals)</li>
+</ul>
+
+    </div>
+
+  </div>
+</div>
+        <div>
+            <h2 class="section-title">Photos</h2>
+           <div class="photo-grid-container">
+    <div class="photo-grid" id="photoGrid">
+  <img src="a1.jpg" alt="Villa Photo 1" data-full-src="a1.jpg">
+<img src="a2.jpg" alt="Villa Photo 2" data-full-src="a2.jpg">
+<img src="a3.jpg" alt="Villa Photo 3" data-full-src="a3.jpg">
+<img src="a4.jpg" alt="Villa Photo 4" data-full-src="a4.jpg">
+<img src="a5.jpg" alt="Villa Photo 5" data-full-src="a5.jpg">
+<img src="a6.jpg" alt="Villa Photo 6" data-full-src="a6.jpg">
+<img src="a7.jpg" alt="Villa Photo 7" data-full-src="a7.jpg">
+<img src="a8.jpg" alt="Villa Photo 8" data-full-src="a8.jpg">
+<img src="a9.jpg" alt="Villa Photo 9" data-full-src="a9.jpg">
+<img src="a10.jpg" alt="Villa Photo 10" data-full-src="a10.jpg">
+<img src="a11.jpg" alt="Villa Photo 11" data-full-src="a11.jpg">
+<img src="a12.jpg" alt="Villa Photo 12" data-full-src="a12.jpg">
+<img src="a13.jpg" alt="Villa Photo 13" data-full-src="a13.jpg">
+<img src="a14.jpg" alt="Villa Photo 14" data-full-src="a14.jpg">
+<img src="a15.jpg" alt="Villa Photo 15" data-full-src="a15.jpg">
+<img src="a16.jpg" alt="Villa Photo 16" data-full-src="a16.jpg">
+<img src="a17.jpg" alt="Villa Photo 17" data-full-src="a17.jpg">
+<img src="a18.jpg" alt="Villa Photo 18" data-full-src="a18.jpg">
+
+  </div>
+</div>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <h2 class="section-title">Our Location</h2>
+           <iframe src="https://www.google.com/maps?q=Karjat,+Maharashtra&output=embed"  allowfullscreen></iframe>
+
+        </div>
+
+        <div class="booking-box">
+            <h2 class="section-title">Book Your Stay</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="number" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>

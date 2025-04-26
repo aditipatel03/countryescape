@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Fort vista 4 BHK,Lonavala</title>
+    <style>
+        /* Existing styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html, body {
+            overflow-x: hidden;
+        }
+        body {
+            background: url("https://i.ibb.co/Z3G97Kq/37f.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 2rem;
+            backdrop-filter: brightness(0.6);
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        .info {
+            margin-bottom: 1.5rem;
+        }
+        .info strong {
+            color: #ffd700;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #ffd700;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem 1rem;
+        }
+
+        /* Styles for the photo grid */
+        .photo-grid-container {
+            overflow-x: auto; /* Enable horizontal scroll */
+            margin-top: 1rem;
+            padding-bottom: 1rem; /* Add some space for scrollbar */
+        }
+
+        .photo-grid {
+            display: flex; /* Arrange images in a row */
+            gap: 1rem; /* Spacing between images */
+            padding: 0.5rem; /* Some padding around the images */
+        }
+
+        .photo-grid img {
+            width: 150px; /* Adjust thumbnail size */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Optional: for click feedback */
+        }
+
+        .photo-grid img.active-scroll {
+            transform: scale(1.1); /* Optional: visually highlight the clicked image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+        }
+
+        /* Styles for the image modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* To stack image and back button */
+        }
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 80%; /* Leave space for the back button */
+            position: relative;
+            margin-bottom: 1rem; /* Space between image and button */
+        }
+        .image-modal-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        .back-to-photos {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-to-photos:hover {
+            background-color: #777;
+        }
+
+        .location-section {
+            margin-top: 2rem;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .booking-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+        }
+        .booking-box label {
+            color: #ffd700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .booking-box input, .booking-box select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ffd700;
+            background-color: #333;
+            color: white;
+        }
+        .booking-box button {
+            background-color: #ffd700;
+            color: black;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .booking-box button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fort vista 4BHK,Lonavala</h1>
+        <div class="info">
+            <p><strong>Price:</strong> ₹15,000 </p>
+            <p><strong>Check-in:</strong> 2 PM</p>
+            <p><strong>Check-out:</strong> 11 AM</p>
+            <p><strong>Address:</strong>Lonavala</p>
+            <p><strong>Rating:</strong> ★ 4/5</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Description</h2>
+            <p>Fort Vista by country escape Infinitum is a gorgeous and eco-friendly 4-bedroom pool villa near pawna with a 180 panoramic view of Pawna Lake. Minimum 4 bedrooms bookable. The entrance level of the bungalow has an outdoor deck, a living room and 4 bedrooms (with ensuite washrooms). A flight of stairs leads to the lower level with a living room, 1 bedroom (with ensuite washrooms), a swimming pool, a gazebo, lawns and a bar on wheels. - This villa over Pawna Lake also has its own organic herb garden. - The road to the home is bumpy and guests are advised to travel by SUVs. The naturally cool climate of Pawna is the perfect excuse not to install air conditioners in the living room. - With no televisions, this holiday home near Mumbai encourages you to spend quality time with your loved ones. - The artefacts in this luxury villa in Pawna are delicate and guests are requested not to touch them
+ </p>
+        </div>
+
+        <div class="info">
+            <p><strong>Up to:</strong> guest </p>
+            <p><strong>Rooms:</strong> 4 </p>
+            <p><strong>Baths:</strong> 5 </p>
+            <p><strong>Meals:</strong> Available</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Amenities</h2>
+                  </div>
+<h2 style="text-align: center; color: #ffffff;">Popular Amenities</h2>
+
+<div style="padding: 30px; font-family: 'Segoe UI', sans-serif; color: #ffffff;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+
+    <!-- Stay & Comfort -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Stay & Comfort</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Private Swimming Pool</li>
+        <li>Free Wi-Fi</li>
+        <li>Kitchenette</li>
+        <li>Private Living Room</li>
+        <li>Private Dining Area</li>
+        <li>Lounge</li>
+        <li>Private Parking</li>
+        <li>Air Conditioning</li>
+        <li>Seating Area</li>
+      </ul>
+    </div>
+
+    <!-- Room and Bathroom -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Room & Bathroom</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Charging Points</li>
+        <li>Private Pool</li>
+        <li>Verandah</li>
+        <li>Housekeeping</li>
+        <li>Heater</li>
+        <li>Mineral Water</li>
+        <li>Bidet</li>
+        <li>Blackout Curtains</li>
+        <li>Toiletries</li>
+        <li>Towels</li>
+        <li>Safe</li>
+        <li>Hot & Cold Water</li>
+        <li>Fruit Basket</li>
+        <li>Closet</li>
+        <li>Shaving Mirror</li>
+        <li>Luggage Storage</li>
+      </ul>
+    </div>
+
+    <!-- Kitchen & Dining -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Kitchen & Dining</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Fully Equipped Kitchen</li>
+        <li>Fridge & Freezer</li>
+        <li>Microwave</li>
+        <li>Cooking Basics: Pots, Pans, Oil, Salt & Pepper</li>
+        <li>Dishes & Cutlery</li>
+        <li>Cooker & Oven</li>
+        <li>Rice Cooker</li>
+        <li>Coffee Maker</li>
+        <li>Barbecue Utensils</li>
+        <li>Dining Table</li>
+      </ul>
+    </div>
+
+    <!-- Safety & Security -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Safety & Security</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Fire Extinguishers</li>
+        <li>CCTV Surveillance</li>
+        <li>Smoke Alarm</li>
+        <li>Carbon Monoxide Alarm</li>
+        <li>First Aid Kit</li>
+      </ul>
+    </div>
+
+    <!-- Internet & Access -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Internet & Access</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Wi-Fi</li>
+        <li>Private Access</li>
+      </ul>
+    </div>
+
+    <!-- Parking & Services -->
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Parking & Services</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Free Parking on Premises</li>
+        <li>Free On-Street Parking</li>
+        <li>Pets Allowed</li>
+        <li>Assistance Animals Allowed</li>
+        <li>Smoking Allowed</li>
+        <li>Long-Term Stays Allowed (28+ Days)</li>
+        <li>Cleaning Available During Stay</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+        <div>
+            <h2 class="section-title">Photos</h2>
+           <div class="photo-grid-container">
+    <div class="photo-grid" id="photoGrid">
+        <img src="1f.jpg" alt="Villa Photo 1" data-full-src="1f.jpg">
+<img src="2f.jpg" alt="Villa Photo 2" data-full-src="2f.jpg">
+<img src="3f.jpg" alt="Villa Photo 3" data-full-src="3f.jpg">
+<img src="4f.jpg" alt="Villa Photo 4" data-full-src="4f.jpg">
+<img src="5f.jpg" alt="Villa Photo 5" data-full-src="5f.jpg">
+<img src="6f.jpg" alt="Villa Photo 6" data-full-src="6f.jpg">
+<img src="7f.jpg" alt="Villa Photo 7" data-full-src="7f.jpg">
+<img src="8f.jpg" alt="Villa Photo 8" data-full-src="8f.jpg">
+<img src="9f.jpg" alt="Villa Photo 9" data-full-src="9f.jpg">
+<img src="10f.jpg" alt="Villa Photo 10" data-full-src="10f.jpg">
+<img src="11f.jpg" alt="Villa Photo 11" data-full-src="11f.jpg">
+<img src="12f.jpg" alt="Villa Photo 12" data-full-src="12f.jpg">
+<img src="13f.jpg" alt="Villa Photo 13" data-full-src="13f.jpg">
+<img src="14f.jpg" alt="Villa Photo 14" data-full-src="14f.jpg">
+<img src="15f.jpg" alt="Villa Photo 15" data-full-src="15f.jpg">
+<img src="16f.jpg" alt="Villa Photo 16" data-full-src="16f.jpg">
+<img src="17f.jpg" alt="Villa Photo 17" data-full-src="17f.jpg">
+<img src="18f.jpg" alt="Villa Photo 18" data-full-src="18f.jpg">
+<img src="19f.jpg" alt="Villa Photo 19" data-full-src="19f.jpg">
+<img src="20f.jpg" alt="Villa Photo 20" data-full-src="20f.jpg">
+<img src="21f.jpg" alt="Villa Photo 21" data-full-src="21f.jpg">
+<img src="22f.jpg" alt="Villa Photo 22" data-full-src="22f.jpg">
+<img src="23f.jpg" alt="Villa Photo 23" data-full-src="23f.jpg">
+<img src="24f.jpg" alt="Villa Photo 24" data-full-src="24f.jpg">
+<img src="25f.jpg" alt="Villa Photo 25" data-full-src="25f.jpg">
+<img src="26f.jpg" alt="Villa Photo 26" data-full-src="26f.jpg">
+<img src="27f.jpg" alt="Villa Photo 27" data-full-src="27f.jpg">
+<img src="28f.jpg" alt="Villa Photo 28" data-full-src="28f.jpg">
+<img src="29f.jpg" alt="Villa Photo 29" data-full-src="29f.jpg">
+<img src="30f.jpg" alt="Villa Photo 30" data-full-src="30f.jpg">
+<img src="31f.jpg" alt="Villa Photo 31" data-full-src="31f.jpg">
+<img src="32f.jpg" alt="Villa Photo 32" data-full-src="32f.jpg">
+<img src="33f.jpg" alt="Villa Photo 33" data-full-src="33f.jpg">
+<img src="34f.jpg" alt="Villa Photo 34" data-full-src="34f.jpg">
+<img src="35f.jpg" alt="Villa Photo 35" data-full-src="35f.jpg">
+<img src="36f.jpg" alt="Villa Photo 36" data-full-src="36f.jpg">
+<img src="37f.jpg" alt="Villa Photo 37" data-full-src="37f.jpg">
+<img src="38f.jpg" alt="Villa Photo 38" data-full-src="38f.jpg">
+<img src="39f.jpg" alt="Villa Photo 39" data-full-src="39f.jpg">
+<img src="40f.jpg" alt="Villa Photo 40" data-full-src="40f.jpg">
+<img src="41f.jpg" alt="Villa Photo 41" data-full-src="41f.jpg">
+<img src="42f.jpg" alt="Villa Photo 42" data-full-src="42f.jpg">
+<img src="43f.jpg" alt="Villa Photo 43" data-full-src="43f.jpg">
+<img src="44f.jpg" alt="Villa Photo 44" data-full-src="44f.jpg">
+<img src="45f.jpg" alt="Villa Photo 45" data-full-src="45f.jpg">
+<img src="46f.jpg" alt="Villa Photo 46" data-full-src="46f.jpg">
+<img src="47f.jpg" alt="Villa Photo 47" data-full-src="47f.jpg">
+<img src="48f.jpg" alt="Villa Photo 48" data-full-src="48f.jpg">
+<img src="49f.jpg" alt="Villa Photo 49" data-full-src="49f.jpg">
+<img src="50f.jpg" alt="Villa Photo 50" data-full-src="50f.jpg">
+
+
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <h2 class="section-title">Our Location</h2>
+           <iframe src="https://www.google.com/maps?q=Pawna+Lake,+Lonavala,+Maharashtra&output=embed" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="booking-box">
+            <h2 class="section-title">Book Your Stay</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="number" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>

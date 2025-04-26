@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <titleLake Panorama 7 BHK,Pawna Lake</title>
+    <style>
+        /* Existing styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html, body {
+            overflow-x: hidden;
+        }
+        body {
+            background: url("https://i.ibb.co/ymfVt3mZ/p14.jpg") no-repeat center center fixed;
+background-size: cover;            color: white;
+            padding: 2rem;
+            backdrop-filter: brightness(0.6);
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        .info {
+            margin-bottom: 1.5rem;
+        }
+        .info strong {
+            color: #ffd700;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #ffd700;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem 1rem;
+        }
+
+        /* Styles for the photo grid */
+        .photo-grid-container {
+            overflow-x: auto; /* Enable horizontal scroll */
+            margin-top: 1rem;
+            padding-bottom: 1rem; /* Add some space for scrollbar */
+        }
+
+        .photo-grid {
+            display: flex; /* Arrange images in a row */
+            gap: 1rem; /* Spacing between images */
+            padding: 0.5rem; /* Some padding around the images */
+        }
+
+        .photo-grid img {
+            width: 150px; /* Adjust thumbnail size */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Optional: for click feedback */
+        }
+
+        .photo-grid img.active-scroll {
+            transform: scale(1.1); /* Optional: visually highlight the clicked image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+        }
+
+        /* Styles for the image modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* To stack image and back button */
+        }
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 80%; /* Leave space for the back button */
+            position: relative;
+            margin-bottom: 1rem; /* Space between image and button */
+        }
+        .image-modal-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        .back-to-photos {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .back-to-photos:hover {
+            background-color: #777;
+        }
+
+        .location-section {
+            margin-top: 2rem;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .booking-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+        }
+        .booking-box label {
+            color: #ffd700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .booking-box input, .booking-box select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ffd700;
+            background-color: #333;
+            color: white;
+        }
+        .booking-box button {
+            background-color: #ffd700;
+            color: black;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .booking-box button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lake Panorama 7 BHK,Pawna Lake.</h1>
+        <div class="info">
+            <p><strong>Price:</strong> ₹15,000 </p>
+            <p><strong>Check-in:</strong> 2 PM</p>
+            <p><strong>Check-out:</strong> 11 AM</p>
+            <p><strong>Address:</strong> Lonavala </p>
+            <p><strong>Rating:</strong> ★ 4/5</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Description</h2>
+            <p>Immerse yourself in the symphony of nature at this unique 7 BHK Villa, providing a breathtaking panoramic view of Pawna Lake. Explore the diverse spaces within the property, including a spacious living room with a lake view, an alfresco dining area, a vast green lawn, and a poolside sitout surrounded by lush greenery. The generously lit and lively rooms, complemented by natural light, offer a refreshing ambiance, with some even providing scenic lake views from the washrooms. Embark on a tour of the property, which comprises two structures—4 BHK and 3BHK—boasting a total of 7 cozy bedrooms. The offerings include a private outdoor pool, expansive lawns, a charming sit-out with a swing, and the option for a bonfire and barbecue. Accommodating up to 25 guests (with additional mattresses available for extra charges), this property provides a perfect blend of comfort and leisure for an enjoyable stay</p>
+        </div>
+
+        <div class="info">
+            <p><strong>Up to:</strong> 14 guests
+
+Can accommodate 11 more guests at extra cost</p>
+            <p><strong>Rooms:</strong> 7</p>
+            <p><strong>Baths:</strong> 7</p>
+            <p><strong>Meals:</strong> Available</p>
+        </div>
+
+        <div>
+            <h2 class="section-title">Amenities</h2>
+<h2 style="text-align: center; color: #ffffff;">Popular Amenities</h2>
+
+<div style="padding: 30px; font-family: 'Segoe UI', sans-serif; color: #ffffff;">
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Stay & Comfort</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Private Swimming Pool</li>
+        <li>Private Living Room</li>
+        <li>Private Dining Area</li>
+        <li>Private Terrace</li>
+        <li>Balcony</li>
+        <li>Seating Area</li>
+        <li>Sofa</li>
+        <li>Verandah</li>
+        <li>Blackout Curtains</li>
+        <li>Blanket</li>
+        <li>Chair</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Facilities</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Air Conditioning</li>
+        <li>Heater</li>
+        <li>Power Backup</li>
+        <li>Fan</li>
+        <li>TV</li>
+        <li>Charging Points</li>
+        <li>Safe</li>
+        <li>Hot & Cold Water</li>
+        <li>Western Toilet Seat</li>
+        <li>Toilet with Grab Rails</li>
+        <li>Washing Machine</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Food & Kitchen</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Kitchen/Kitchenette</li>
+        <li>Dining Area</li>
+        <li>In-room Dining</li>
+        <li>Fruit Basket</li>
+        <li>Cake</li>
+        <li>Kettle</li>
+        <li>Cutlery</li>
+        <li>Kid's Menu</li>
+        <li>BBQ Grill</li>
+        <li>Bar Counter</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Entertainment & Outdoor</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Sound Speakers</li>
+        <li>Sun Deck</li>
+        <li>Music System</li>
+        <li>Pool Loungers</li>
+        <li>Gazebo</li>
+        <li>Terrace</li>
+        <li>Spacious Lawn</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Safety & Services</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Housekeeping</li>
+        <li>Room Service</li>
+        <li>Bellboy Service</li>
+        <li>Caretaker</li>
+        <li>CCTV</li>
+        <li>First-aid Services</li>
+        <li>Luggage Assistance</li>
+        <li>Luggage Storage</li>
+        <li>Smoking Room</li>
+        <li>Shaving Mirror</li>
+        <li>Specially Abled Assistance</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 300px;">
+      <h3 style="color: #ffffff;">Parking & Accessibility</h3>
+      <ul style="list-style-type: square; padding-left: 20px;">
+        <li>Private Parking (3 Cars)</li>
+        <li>Onsite Parking Available</li>
+        <li>Free Parking</li>
+        <li>Private Access</li>
+        <li>Child Safety Socket Covers</li>
+        <li>Wheelchair Accessible</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+        </div>
+
+        <div>
+            <h2 class="section-title">Photos</h2>
+            <div class="photo-grid-container">
+ <div class="photo-grid" id="photoGrid">
+  <img src="p1.jpg" alt="Villa Photo 1" data-full-src="p1.jpg">
+  <img src="p2.jpg" alt="Villa Photo 2" data-full-src="p2.jpg">
+  <img src="p3.jpeg" alt="Villa Photo 3" data-full-src="p3.jpeg">
+<img src="p4.jpeg" alt="Villa Photo 4" data-full-src="p4.jpeg">
+<img src="p5.jpeg" alt="Villa Photo 5" data-full-src="p5.jpeg">
+<img src="p6.jpeg" alt="Villa Photo 6" data-full-src="p6.jpeg">
+<img src="p7.jpeg" alt="Villa Photo 7" data-full-src="p7.jpeg">
+<img src="p8.jpeg" alt="Villa Photo 8" data-full-src="p8.jpeg">
+<img src="p9.jpeg" alt="Villa Photo 9" data-full-src="p9.jpeg">
+<img src="p10.jpeg" alt="Villa Photo 10" data-full-src="p10.jpeg">
+<img src="p11.jpeg" alt="Villa Photo 11" data-full-src="p11.jpeg">
+<img src="p12.jpeg" alt="Villa Photo 12" data-full-src="p12.jpeg">
+<img src="p13.jpeg" alt="Villa Photo 13" data-full-src="p13.jpeg">
+<img src="p14.jpeg" alt="Villa Photo 14" data-full-src="p14.jpeg">
+<img src="p15.jpeg" alt="Villa Photo 15" data-full-src="p15.jpeg">
+<img src="p16.jpeg" alt="Villa Photo 16" data-full-src="p16.jpeg">
+<img src="p17.jpeg" alt="Villa Photo 17" data-full-src="p17.jpeg">
+<img src="p18.jpeg" alt="Villa Photo 18" data-full-src="p18.jpeg">
+
+   </div>
+        </div>
+
+        <div class="location-section">
+            <h2 class="section-title">Our Location</h2><iframe src="https://www.google.com/maps?q=Lonavala,+Maharashtra,+India&output=embed" 
+      width="100%" " height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+     </div>
+
+        <div class="booking-box">
+            <h2 class="section-title">Book Your Stay</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="number" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>

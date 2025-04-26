@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Country Escape | Homestays & Villas</title>
+  <style>
+    /* Keep all original styles and add only what's needed */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .logo img {
+      height: 70px;
+    }
+
+    nav.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin-left: 20px;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      padding: 10px;
+      display: block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      min-width: 160px;
+      z-index: 20;
+    }
+
+    .dropdown-menu li {
+      border-bottom: 1px solid #eee;
+    }
+
+    .dropdown-menu li:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      padding: 10px 15px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 10px;
+      margin-left: auto;
+    }
+
+    .cta-buttons a {
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .list-home {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .login-btn {
+      background-color: #004aad;
+      color: white;
+    }
+
+    .hero {
+      background: url('bg.jpg') center center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 120px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .search-bar {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 12px 20px;
+      border-radius: 50px;
+      width: 90%;
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      width: 100%;
+      font-size: 1rem;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#">Destinations</a>
+          <ul class="dropdown-menu">
+            <li><a href="lonavala.html">Lonavala</a></li>
+            <li><a href="khopoli.html">Khopoli</a></li>
+            <li><a href="neral.html">Neral</a></li>
+            <li><a href="karjat.html">Karjat</a></li>
+            <li><a href="pawna.html">Pawna</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Villas</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://i.ibb.co/d43HwGsk/logo.jpg" alt="Country Escape Logo">
+        </a>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="tel:+919004900382" class="call">📞 +91 9004900382</a>
+        <a href="#" class="list-home">List your home</a>
+        <a href="#" class="login-btn">Log In</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Your Comfort, Our Commitment</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for location, villa, facilities...">
+    </div>
+  </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Country Escape</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .icon-section {
+      background: #f0f0f0;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .icon-box {
+      text-align: center;
+    }
+    .icon-box img {
+      width: 60px;
+      height: 60px;
+    }
+    .icon-box span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.feature-box {
+  background: #d3d3d3;
+  color: #000;
+  width: 100%;
+  max-width: 360px; /* Increased for better content fit */
+  min-height: 580px; /* Adjusted to fit longer text */
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-box img {
+  width: 100%;
+  height: 220px; /* Taller image for visual balance */
+  object-fit: cover;
+}
+
+.feature-box h3 {
+  margin: 16px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.feature-box p {
+  margin: 0 16px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 40px 20px;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .footer-left {
+      max-width: 300px;
+    }
+    .footer-left h4 {
+      font-family: cursive;
+      font-size: 24px;
+    }
+    .footer-left p {
+      margin: 10px 0;
+    }
+    .footer-right ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-right ul li {
+      margin-bottom: 8px;
+    }
+    .footer-contact p, .footer-contact a {
+      margin: 6px 0;
+      color: #ccc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+ <!-- Icon Section -->
+  <section class="icon-section">
+    <div class="icon-box">
+      <img src="https://i.ibb.co/90pKv8y/matheran-removebg-preview.png" alt="Matheran">
+      <span>MATHERAN</span>
+    </div>
+    <div class="icon-box">
+      <img src="https://i.ibb.co/C5WNkr1Q/karjat-removebg-preview.png" alt="Karjat">
+      <span>KARJAT</span>
+    </div>
+    <div class="icon-box">
+      <img src="https://i.ibb.co/qF47vq7y/khopoli-removebg-preview.png" alt="Khopoli">
+      <span>KHOPOLI</span>
+    </div>
+    <div class="icon-box">
+      <img src="https://i.ibb.co/CsmVncgp/lonavala-removebg-preview.png" alt="Lonavala">
+      <span>LONAVALA</span>
+    </div>
+    <div class="icon-box">
+      <img src="https://i.ibb.co/YB6mWgQ8/pawna-removebg-preview.png" alt="Pawna">
+      <span>PAWNA</span>
+    </div>
+  </section>
+
+  <!-- Feature Section -->
+  <section class="features-section">
+    <div class="feature-box">
+      <img src="https://i.ibb.co/V0CcnRj1/view.jpg" alt="Best Views">
+      <h3>BEST VIEWS</h3>
+      <p>The best views from a villa window transforms your living experience, offering a stunning glimpse of the natural beauty surrounding your home. Whether it’s a breathtaking a tranquli mountain view with rolling hills, or a serene lake or river that stretches into the distance, these views create an atmosphere of peace and luxury. Picture yourself waking up to the beauty of lush gardens, a sparkling pool, or an iconic city skyline at sunset. No matter the landscape, a villa with an exceptional view invites you to relax, recharge, and truly enjoy your surroundings from the comfort of your own home.</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://i.ibb.co/bjTrqd7J/pool.jpg" alt="Pool By Your Side">
+      <h3>POOL BY YOUR SIDE</h3>
+      <p>Imagine stepping into your private villa with a stunning pool right at your doorstep. Whether you’re looking to unwind after a long day, enjoy a refreshing swim, or host a memorable gathering, a pool in your villa offers the ultimate convenience and comfort. It’s a perfect retreat for both quiet moments of solitude and lively poolside parties.</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://i.ibb.co/b5F0nvvF/dog-fri.jpg" alt="Pet Friendly">
+      <h3>PET FRIENDLY</h3>
+      <p>Our villas offer the perfect pet-friendly escape, ensuring that your furry companions are just as welcome as you are. With spacious outdoor areas, secure gardens, and pet-friendly amenities, your pets can enjoy the same luxury and comfort as you. Whether it’s enjoying a stroll through beautiful landscapes, lounging in the sun, or simply relaxing at home, our villas are designed to provide an unforgettable experience for both you and your pet. Travel with peace of mind knowing that your four-legged family members are welcome to share in the vacation and enjoyment of your villa stay.</p>
+    </div>
+  </section>
+
+ 
+  <!-- Villas Slider -->
+<section style="padding: 60px 0; background-color: #fff; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+  <a href="elcasa.html" style="text-decoration: none; color: inherit;">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px;">Explore Our Villas</h2>
+    <div class="villa-slider" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 20px; padding: 0 20px; justify-content: center;">
+      
+      <!-- First Villa Box -->
+      <div style="min-width: 250px; scroll-snap-align: center; background: #eee; border-radius: 12px; overflow: hidden; height: 350px;">
+        <img src="https://i.ibb.co/gZZPxLKN/ELCASA.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <h3>El Casa, Karjat</h3>
+          <p>Luxurious 4BHK with pool & mountain views.</p>
+        </div>
+      </div>
+
+      <!-- Second Villa Box -->
+      <a href="sap.html" style="text-decoration: none; color: inherit;">
+        <div style="min-width: 250px; scroll-snap-align: center; background: #eee; border-radius: 12px; overflow: hidden; height: 350px;">
+          <img src="https://i.ibb.co/0y79J2d5/12j.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 15px;">
+            <h3>Sapphire Grand, Lonavala</h3>
+            <p>Cozy 4BHK near nature trails and waterfalls.</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Third Villa Box -->
+      <div style="min-width: 250px; scroll-snap-align: center; background: #eee; border-radius: 12px; overflow: hidden; height: 350px;">
+        <a href="panorama.html">
+          <img src="https://i.ibb.co/ymfVt3mZ/p14.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+        </a>
+        <div style="padding: 15px;">
+          <h3>Lake Panorama, Lonavala</h3>
+          <p>Modern rooftop stay with city views.</p>
+        </div>
+      </div>
+
+      <!-- Fourth Villa Box -->
+      <a href="valley.html" style="text-decoration: none; color: inherit;">
+        <div style="min-width: 250px; scroll-snap-align: center; background: #eee; border-radius: 12px; overflow: hidden; height: 350px;">
+          <img src="https://i.ibb.co/1YVr6DCp/v14.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 15px;">
+            <h3>Valley Front, Karjat</h3>
+            <p>Peaceful stay by the river with gazebo & view.</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </a>
+</section>
+
+ <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <h4>Country Escape</h4>
+        <p>"Your Comfort, Our Commitment."</p>
+        <div class="footer-contact">
+          <p>📞 9004-9003-82</p>
+          <p>📷 @country_escape_stays</p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <h4>VILLA HOMESTAYS</h4>
+        <ul>
+          <li>Lonavla</li>
+          <li>Pawna</li>
+          <li>Igatpuri</li>
+          <li>Matheran</li>
+          <li>Karjat</li>
+          <li>Khopoli</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
